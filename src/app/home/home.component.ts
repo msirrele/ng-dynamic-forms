@@ -1,15 +1,20 @@
 import { Component, OnInit } from '@angular/core';
+import { QuestionService } from '../question.service';
 
 @Component({
-  selector: 'app-home',
-  templateUrl: './home.component.html',
-  styleUrls: ['./home.component.css'],
+	selector: 'app-home',
+	templateUrl: './home.component.html',
+	styleUrls: ['./home.component.css'],
+	providers: [QuestionService]
 })
 export class HomeComponent implements OnInit {
-  title = 'dynamic-forms';
+	title = 'dynamic-forms';
 
-  constructor() { }
+	questions: any[];
 
-  ngOnInit() {
-  }
+	constructor(service: QuestionService) {
+		this.questions = service.getQuestions();
+	}
+	ngOnInit() {
+	}
 }

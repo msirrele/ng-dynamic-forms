@@ -1,0 +1,11 @@
+<h3>Top Dynamic Forms</h3>
+<div class="grid grid-pad">
+  <a
+    *ngFor="let dynamicForm of dynamicForms"
+    routerLink="/detail/{{dynamicForm._id}}"
+    class="col-1-4">
+    <div class="module dynamic-forms">
+      <h4>{{dynamicForm.title}}</h4>
+    </div>
+  </a>
+</div>

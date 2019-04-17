@@ -1,0 +1,18 @@
+<div *ngIf="dynamicForm">
+  <h2>{{dynamicForm.title | uppercase}}</h2>
+  <div><span>id: </span>{{dynamicForm._id}}</div>
+  <div><span>name: </span>{{dynamicForm.title}}</div>
+  <mat-form-field
+    appearance="outline">
+    <mat-label>
+      {{dynamicForm.displayTitle}}
+    </mat-label>
+    <input
+      matInput
+      [(ngModel)]="dynamicForm.title"
+      placeholder="title"/>
+  </mat-form-field>
+</div>
+<button
+  mat-button
+  (click)="goBack()">Go Back</button>

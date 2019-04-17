@@ -1,0 +1,14 @@
+  <h2>Dynamic Forms</h2>
+<div>
+  <ul class="dynamic-forms">
+    <li
+      *ngFor="let dynamicForm of dynamicForms">
+      <a routerLink="/detail/{{dynamicForm._id}}">
+        <span class="badge">{{dynamicForm._id}}</span>{{dynamicForm.title}}
+      </a>
+    </li>
+  </ul>
+</div>
+  <app-dynamic-form-detail
+    [dynamicForm]="selectedDynamicForm">
+  </app-dynamic-form-detail>
