@@ -40,6 +40,7 @@
     "nativescript-theme-core": "^1.0.4",
     "reflect-metadata": "~0.1.13",
     "rxjs": "^6.4.0",
+    "rxjs-observable-store": "^1.0.1",
     "tns-core-modules": "~5.3.1",
     "uglifyjs-webpack-plugin": "^2.1.2",
     "zone.js": "^0.9.0"
